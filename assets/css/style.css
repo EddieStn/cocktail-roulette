@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+* {
+    box-sizing: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(54, 10, 10);
+    color: gold;
+    letter-spacing: 2px;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.outer-box {
+    position: relative;
+    width: 30em;
+    height: 30em;
+}
+
+.inner-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+span {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+.cocktail1 {
+    clip-path: polygon(10% 0, 50% 100%, 90% 0);
+    background-color: rgb(255, 0, 0);
+    left: 120px;
+    top: 0;
+}
+.cocktail2 {
+    clip-path: polygon(0 100%, 40% 0, 100% 60%);
+    background-color: rgb(255, 145, 0);
+    right: 0;
+}
+.cocktail3 {
+    clip-path: polygon(0 50%, 100% 10%, 100% 90%);
+    background-color: rgb(147, 199, 3);
+    right: 0;
+    top: 120px;
+}
+.cocktail4 {
+    clip-path: polygon(0 0, 100% 40%, 40% 100%);
+    background-color: rgb(0, 216, 133);
+    bottom: 0;
+    right: 0;
+}
+.cocktail5 {
+    clip-path: polygon(50% 0, 10% 100%, 90% 100%);
+    background-color: rgb(0, 128, 187);
+    left: 120px;
+    bottom: 0;
+}
+.cocktail6 {
+    clip-path: polygon(100% 0, 60% 100%, 0 40%);
+    background-color: rgb(42, 0, 192);
+    left: 0;
+    bottom: 0;
+}
+.cocktail7 {
+    clip-path: polygon(100% 50%, 0 10%, 0 90%);
+    background-color: rgb(68, 0, 114);
+    top: 120px;
+}
+.cocktail8 {
+    clip-path: polygon(100% 100%, 0 60%, 60% 0);
+    background-color: rgb(161, 0, 67);
+    top: 0;
+}
+.spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3em;
+    height: 3em;
+    font-size: 1.2rem;
+    color: #000;
+    background-color: gold;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px 5px #333;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-weight: bold;
+}
+.spin:active {
+    width: 2.9em;
+    height: 2.9em;
+    font-size: 1.1rem;
+}
