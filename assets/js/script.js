@@ -11,3 +11,18 @@ function spinTheWheel() {
 function showRecipe() {
     
 }
+
+const cocktails = new Set();
+
+cocktails.add({
+    name: "Cuba Libre",
+    ingredients: [],
+    method: ""
+})
+cocktails.add({
+    name: "Pina Colada",
+    ingredients: [],
+    method: ""
+})
+
+console.log(cocktails)
