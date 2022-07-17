@@ -14,7 +14,7 @@
     <header>
         <h1>Cocktail Roulette</h1>
     </header>
-    <div class="top"><h1>Spin the octagon to reveal your next cocktail!</h1></div>
+    <div class="top-heading"><h1>Spin the octagon to reveal your next cocktail!</h1></div>
     <div class="outer-box">
         <div id="inner-box" class="inner-box">
             <div class="box1">
@@ -32,6 +32,11 @@
             </div>
         </div>
         <button class="spin" onclick="spinTheWheel()">SPIN</button>
+    </div>
+    <div class="spirit-picker">
+        <label for="spirit-input">Get a cocktail based on a spirit</label>
+        <input type="text" id="spirit-input" placeholder="Choose a spirit">
+        <button onclick="getCocktails()" id="submit">Submit</button>
     </div>
 
     <!--

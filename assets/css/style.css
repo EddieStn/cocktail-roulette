@@ -10,10 +10,15 @@ body {
     font-family: 'Jost', sans-serif;
     display: grid;
     gap: 1em;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 4em 2em auto;
-    justify-content: center;
-    align-items: center;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4em 2em auto; */
+    grid-template:
+        "header header" 4em
+        "top-headig ." 4em
+        "outer-box spirit-picker" auto
+        / 60% 40%;
+    /* justify-content: center;
+    align-items: center; */
     background-color: rgb(54, 10, 10);
     color: gold;
     height: 100vh;
@@ -22,11 +27,16 @@ body {
 }
 
 header {
-    grid-column: 1/-1;
-    grid-row: 1/2;
+    grid-area: header;
     background-color: #000;
     max-width: 100%;
     letter-spacing: 3px;
+}
+
+.top-heading {
+    grid-area: top-heading;
+    max-width: 100%;
+    letter-spacing: 2px;    
 }
 
 h1 {
@@ -34,21 +44,15 @@ h1 {
     line-height: 2em;
 }
 
-.top {
-    display: flex;
-    justify-content: center;
-    grid-row: 2/ 3;
-    grid-column: 1/-1;
-    padding-top: 3em;
-    letter-spacing: 2px;    
+.spirit-picker {
+    grid-area: spirit-picker;
 }
 
 .outer-box {
+    grid-area: outer-box;
     position: relative;
     width: 30em;
     height: 30em;
-    grid-row: 2/ -1;
-    grid-column: 2/2;
     justify-content: center;
 }
 

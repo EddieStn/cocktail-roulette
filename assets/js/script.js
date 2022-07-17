@@ -8,6 +8,11 @@ function spinTheWheel() {
 
 }
 
+function getCocktails() {
+    let userValue = document.getElementById("spirit-input").value;
+    alert("You chose: " +userValue);
+}
+
 function showRecipe() {
     
 }
@@ -26,3 +31,4 @@ cocktails.add({
 })
 
 console.log(cocktails)
+console.log("hello")
