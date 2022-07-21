@@ -10,26 +10,21 @@ body {
     font-family: 'Jost', sans-serif;
     display: grid;
     gap: 1em;
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 4em 2em auto; */
     grid-template:
-        "header header" 4em
-        "top-headig ." 4em
-        "outer-box spirit-picker" auto
-        / 60% 40%;
-    /* justify-content: center;
-    align-items: center; */
+        "header header header" 4em
+        "top-heading top-heading top-heading" 4em
+        ". outer-box ." auto
+        ". user-search ." auto / 1fr 8fr 1fr;
+    
     background-color: rgb(54, 10, 10);
     color: gold;
-    height: 100vh;
     overflow: hidden;
-    background-size: cover;
+    background-size: cover; 
 }
 
 header {
     grid-area: header;
     background-color: #000;
-    max-width: 100%;
     letter-spacing: 3px;
 }
 
@@ -44,8 +39,8 @@ h1 {
     line-height: 2em;
 }
 
-.spirit-picker {
-    grid-area: spirit-picker;
+#user-search {
+    grid-area: user-search;
 }
 
 .outer-box {

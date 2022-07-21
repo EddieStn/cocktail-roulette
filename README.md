@@ -46,3 +46,18 @@
 - From the Code and automation click on Pages
 - From the source section drop-down menu, select the Master Branch and click Save
 - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - 
+
+# Credits 
+## Many thanks to my mentor, Chris Quinn, for his guidance
+## Daniel_C_5p_lead for helping me with an  issue on a slack thread
+
+
+# Acknowledgements
+## Many thanks to my mentor, Chris Quinn, for his guidance
+## Daniel_C_5p_lead for helping me with an  issue on a slack thread
+
+
+# Sources
+## Sites and courses that provided me with extra information and best practices to help build this project

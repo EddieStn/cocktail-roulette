@@ -33,6 +33,7 @@ subBtn.addEventListener('click', (e) => {
         <h2>${result.name}</h2>
         <h3>Ingredients: ${result.ingredients}</h3>
         <h3>Method: ${result.method}</h3>
+        <hr>
         `
     })
     // if noresults and html is empty : else - populate search results
@@ -57,6 +58,7 @@ function showRandomCocktail() {
 
 
 // Cocktails array
+
 const cocktails = [
     {
     name: "Cuba Libre", 
