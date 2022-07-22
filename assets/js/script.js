@@ -308,7 +308,7 @@ const cocktails = [
     Stir the ingredients with ice in a mixing glass, then strain into a cocktail glass. Garnish and serve.
     <br> Prep 5min / Serves 1`
 }, {
-    name: "",
+    name: "Irish whiskey old fashioned",
     ingredients: `<ul>
     <li>40ml Irish whiskey</li>
     <li>10ml elderflower cordial</li>
