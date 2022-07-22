@@ -50,7 +50,6 @@
 The live link can be found here - 
 
 # Credits 
-## Many thanks to my mentor, Chris Quinn, for his guidance
 ## Daniel_C_5p_lead for helping me with an  issue on a slack thread
 
 

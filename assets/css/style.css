@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 * {
-    /* box-sizing: 0; */
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -57,7 +57,7 @@ h1 {
     grid-area: user-search;
     display: flex;
     justify-content: center;
-    /* margin-top: 2em; */
+    margin-top: 1em;
     font-size: 1.2rem;
 }
 #input {
@@ -73,12 +73,12 @@ h1 {
     height: 2em;
     border-radius: 10px;
     margin-top: 5px;    
+    cursor: pointer;
 }
 #submit-btn:hover {
     background-color: #000;
     color: gold;
 }
-
 
 .outer-box {
     grid-area: outer-box;
@@ -88,7 +88,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .inner-box {
