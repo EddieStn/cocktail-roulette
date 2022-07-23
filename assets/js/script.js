@@ -1,8 +1,11 @@
 const body = document.body;
 
-let input = document.querySelector('#input')
-const subBtn = document.querySelector('#submit-btn')
-const searchResults = document.querySelector('#search-results')
+let input = document.querySelector('#input');
+const subBtn = document.querySelector('#submit-btn');
+const searchResults = document.querySelector('#search-results');
+const spin = document.querySelector('#spin');
+let display = document.querySelector('#display');
+let results;
 
 subBtn.addEventListener('click', (e) => {
     // prevent page reload
@@ -11,20 +14,42 @@ subBtn.addEventListener('click', (e) => {
     const term = input.value.trim()
 
     getRandomCocktails(term)
-    displayCocktails(term);
+    displayCocktails();
 })
 
-let results;
 
+spin.addEventListener('click', (e) => {
+    e.preventDefault();
+    let index = getRandom(0, cocktails.length -1);
+    display.innerHTML = cocktails[index];
+});
+
+function displayRandomCocktail() {
+
+}
+
+function getRandom(min, max) {
+    let step1 = max - min + 1;
+    let step2 = Math.random() * step1;
+    let result = Math.floor(step2) + min;
+    return result;
+}
+
+/**
+ * Iterate over cocktails and find any values that match search term
+ */
 function getRandomCocktails(term) {
-    // iterate over cocktails and find any values that match search term
     results = cocktails.filter(cocktail => {
         if (term.length > 0) {
             return cocktail.ingredients.includes(term.toLowerCase())
         } 
     })
 }
-function displayCocktails(term) {
+
+/**
+ * Display cocktails matching input value
+ */
+function displayCocktails() {
     let html = ``
     // populate html template literal
     results.map(result => { 
@@ -36,16 +61,10 @@ function displayCocktails(term) {
         `
     })
     // if noresults and html is empty : else - populate search results
-    html == '' ? searchResults.innerHTML = `<h2>Sorry, no results found matching ${term}</h2><h2>Please try rum / gin / vodka / whiskey</h2>` : searchResults.innerHTML = html
+    html == '' ? searchResults.innerHTML = `<h2>You need to enter a valid input.</h2><h2>Please try rum / gin / vodka / whiskey</h2>` : searchResults.innerHTML = html
     
     // reset input 
     input.value = ''
-}
-
-
-
-function showRandomCocktail() {
-    
 }
 
 function spinTheWheel() {

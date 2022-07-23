@@ -79,6 +79,9 @@ h1 {
     background-color: #000;
     color: gold;
 }
+#random-result {
+    display: flex;
+}
 
 .outer-box {
     grid-area: outer-box;
@@ -162,7 +165,7 @@ span img {
 .cocktail8 {
     background-color: rgb(131, 21, 67);
 }
-.spin {
+#spin {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -177,7 +180,7 @@ span img {
     cursor: pointer;
     font-weight: bold;
 }
-.spin:active {
+#spin:active {
     width: 2.9em;
     height: 2.9em;
     font-size: 1.1rem;
