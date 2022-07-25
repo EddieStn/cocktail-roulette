@@ -1,10 +1,10 @@
 const body = document.body;
 
-let input = document.querySelector('#input');
+const input = document.querySelector('#input');
 const subBtn = document.querySelector('#submit-btn');
 const searchResults = document.querySelector('#search-results');
 const spin = document.querySelector('#spin');
-let display = document.querySelector('#display');
+const display = document.querySelector('#display');
 let results;
 
 subBtn.addEventListener('click', (e) => {
@@ -13,32 +13,38 @@ subBtn.addEventListener('click', (e) => {
     // get users input
     const term = input.value.trim()
 
-    getRandomCocktails(term)
+    getSearchedCocktails(term)
     displayCocktails();
 })
 
-
 spin.addEventListener('click', (e) => {
     e.preventDefault();
-    let index = getRandom(0, cocktails.length -1);
-    display.innerHTML = cocktails[index];
+
+    setTimeout(() => {
+        displayRandomCocktail();
+      }, 5000);
+    display.innerHTML = ``;
 });
 
+/**
+ * Displays a random cocktail from the cocktails array when the spin button is pressed
+ */
 function displayRandomCocktail() {
-
-}
-
-function getRandom(min, max) {
-    let step1 = max - min + 1;
-    let step2 = Math.random() * step1;
-    let result = Math.floor(step2) + min;
-    return result;
+    let index = cocktails[Math.floor(Math.random()*cocktails.length)];
+    display.innerHTML = cocktails[index];
+    cocktails.map(() => {
+        display.innerHTML = `
+        <h2>${index.name}</h2>
+        <h3>Ingredients: ${index.ingredients}</h3>
+        <h3>Method: ${index.method}</h3>
+        `
+    })  
 }
 
 /**
- * Iterate over cocktails and find any values that match search term
+ * Iterate over cocktails and find any entries that match the user input
  */
-function getRandomCocktails(term) {
+function getSearchedCocktails(term) {
     results = cocktails.filter(cocktail => {
         if (term.length > 0) {
             return cocktail.ingredients.includes(term.toLowerCase())
