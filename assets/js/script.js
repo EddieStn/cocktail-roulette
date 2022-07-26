@@ -1,4 +1,3 @@
-const body = document.body;
 
 const input = document.querySelector('#input');
 const subBtn = document.querySelector('#submit-btn');
@@ -11,11 +10,11 @@ subBtn.addEventListener('click', (e) => {
     // prevent page reload
     e.preventDefault();
     // get users input
-    const term = input.value.trim()
+    const term = input.value.trim();
 
-    getSearchedCocktails(term)
+    getSearchedCocktails(term);
     displayCocktails();
-})
+});
 
 spin.addEventListener('click', (e) => {
     e.preventDefault();
@@ -34,11 +33,11 @@ function displayRandomCocktail() {
     display.innerHTML = cocktails[index];
     cocktails.map(() => {
         display.innerHTML = `
-        <h2>${index.name}</h2>
-        <h3>Ingredients: ${index.ingredients}</h3>
+        <h2>${index.name}</h2><br>
+        <h3>Ingredients: ${index.ingredients}</h3><br>
         <h3>Method: ${index.method}</h3>
-        `
-    })  
+        `;
+    });
 }
 
 /**
@@ -47,16 +46,16 @@ function displayRandomCocktail() {
 function getSearchedCocktails(term) {
     results = cocktails.filter(cocktail => {
         if (term.length > 0) {
-            return cocktail.ingredients.includes(term.toLowerCase())
-        } 
-    })
+            return cocktail.ingredients.includes(term.toLowerCase());
+        }
+    });
 }
 
 /**
  * Display cocktails matching input value
  */
 function displayCocktails() {
-    let html = ``
+    let html = ``;
     // populate html template literal
     results.map(result => { 
         html += `
@@ -64,13 +63,13 @@ function displayCocktails() {
         <h3>Ingredients: ${result.ingredients}</h3>
         <h3>Method: ${result.method}</h3>
         <hr>
-        `
-    })
+        `;
+    });
     // if noresults and html is empty : else - populate search results
-    html == '' ? searchResults.innerHTML = `<h2>You need to enter a valid input.</h2><h2>Please try rum / gin / vodka / whiskey</h2>` : searchResults.innerHTML = html
+    html == '' ? searchResults.innerHTML = `<h2>You need to enter a valid input.</h2><h2>Please try rum / gin / vodka / whiskey</h2>` : searchResults.innerHTML = html;
     
     // reset input 
-    input.value = ''
+    input.value = '';
 }
 
 function spinTheWheel() {

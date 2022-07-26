@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='assets/css/style.css'>
-    <title>Cocktail Roulette</title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <title>Cocktail Roulette</title>
 </head>
 
 <body>
     <header>
         <h1>Cocktail Roulette</h1>
     </header>
-    <div class="top-heading"><h1>Spin the octagon to reveal your next cocktail!</h1></div>
+    <div class="top-heading">
+        <h1>Spin the wheel to reveal a random cocktail once the animation ends</h1>
+        <h1>Or search for cocktails based on a specific spirit based</h1>
+    </div>
     <div class="outer-box">
         <div id="inner-box" class="inner-box">
             <div class="box1">
@@ -33,7 +36,7 @@
         </div>
         <button id="spin" onclick="spinTheWheel();">SPIN</button>
     </div>
-    <div id="display"><h2></h2></div>
+    <div id="display"></div>
     <div id="user-search">
         <form>
             <label for="input">Get cocktails by spirit</label>
@@ -43,7 +46,7 @@
     </div>
 
     <div class="container" id="search-results"></div>
-    <footer>Cheers! - Kanpai! - Saluti! - Prost! - À la vôtre! - Noroc!</footer>
+    <footer>Cheers!</footer>
     <script src="assets/js/cocktails.js"></script>
     <script src='assets/js/script.js'></script>
 </body>
