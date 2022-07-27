@@ -18,6 +18,8 @@
 - Desktop
 
 # Bugs
+spin button when clicked multiple times will not wait 5 seconds(setTimeout... 5000) before showing a cocktail
+fixed with clearTimeout
 
 # Local Development
 

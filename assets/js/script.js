@@ -7,23 +7,25 @@ const display = document.querySelector('#display');
 let results;
 
 subBtn.addEventListener('click', (e) => {
-    // prevent page reload
     e.preventDefault();
-    // get users input
     const term = input.value.trim();
-
     getSearchedCocktails(term);
     displayCocktails();
 });
 
 spin.addEventListener('click', (e) => {
     e.preventDefault();
-
-    setTimeout(() => {
-        displayRandomCocktail();
-      }, 5000);
+    spinTheWheel();
+    resetTimer();
     display.innerHTML = ``;
 });
+
+const timer = setTimeout(() => {displayRandomCocktail();}, 5000);
+
+function resetTimer() {
+    clearTimeout(timer);
+    timer = setTimeout(() => {displayRandomCocktail();}, 5000);
+}
 
 /**
  * Displays a random cocktail from the cocktails array when the spin button is pressed

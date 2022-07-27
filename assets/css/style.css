@@ -17,22 +17,21 @@ body {
     gap: 2em;
     grid-template:
         "header header header" 4em
-        ". top-heading ." 4em
+        ". top-heading ." auto
         ". wheel-box ." auto
         ". display ." auto
         ". user-search ." auto
         ". search-results ." auto
-        "footer footer footer" 4em / 1em 1fr 1em;
+        "footer footer footer" 4em / 1fr 8fr 1fr;
     
     background-color: rgb(54, 10, 10);
     color: gold;
-    /* background-size: cover;  */
 }
 
 header {
     grid-area: header;
     background-color: #000;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-shadow: 0 5px 5px #ff0000;
     text-align: center;
 }
@@ -41,29 +40,79 @@ header h1 {
     line-height: 2em;
 }
 
-footer {
-    grid-area: footer;
-    font-size: 1.5rem;
-    text-align: center;
-    background-color: #000;
-    line-height: 2em;
-}
 .top-heading {
     grid-area: top-heading;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    /* width: fit-content; */
+    width: auto;
     letter-spacing: 2px;
-    
 }
 
 .top {
-    font-size: clamp(1.5rem, 2vh, 3rem);
+    font-size: 2rem;
+    padding: 5px;
+}
+
+.wheel-box {
+    grid-area: wheel-box;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px groove rgb(227, 225, 225);
 }
 
 
+.wheel {
+    width: 100%;
+    height: 100%;
+    transition: all ease 5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(
+        hsl(360, 100%, 50%),
+        hsl(315, 100%, 50%),
+        hsl(270, 100%, 50%),
+        hsl(225, 100%, 50%),
+        hsl(180, 100%, 50%),
+        hsl(135, 100%, 50%),
+        hsl(90, 100%, 50%),
+        hsl(45, 100%, 50%),
+        hsl(0, 100%, 50%)
+    );
+    border-radius: 50%;
+}
+
+#spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3em;
+    height: 3em;
+    font-size: 1.2rem;
+    color: #000;
+    background-color: gold;
+    border-radius: 50%;
+    border: 3px outset rgb(194, 11, 11);
+    box-shadow: 0 4px 20px 5px #333;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-weight: bold;
+    text-shadow: -3px 2px 5px #ff0000;
+}
+#spin:active {
+    width: 2.9em;
+    height: 2.9em;
+    font-size: 1.1rem;
+}
 
 #display {
     grid-area: display;
@@ -101,57 +150,21 @@ footer {
     color: gold;
 }
 
-.wheel-box {
-    grid-area: wheel-box;
-    position: relative;
-    width: min(350px, 50vh, 700px);
-    height: min(350px, 50vh, 700px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    border-radius: 50%;
+footer {
+    grid-area: footer;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #000;
+    line-height: 2em;
 }
 
-
-.wheel {
-    width: 100%;
-    height: 100%;
-    transition: all ease 5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: conic-gradient(
-        hsl(360, 100%, 50%),
-        hsl(315, 100%, 50%),
-        hsl(270, 100%, 50%),
-        hsl(225, 100%, 50%),
-        hsl(180, 100%, 50%),
-        hsl(135, 100%, 50%),
-        hsl(90, 100%, 50%),
-        hsl(45, 100%, 50%),
-        hsl(0, 100%, 50%)
-    );
-    border-radius: 50%;
-}
-
-#spin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 3em;
-    height: 3em;
-    font-size: 1.2rem;
-    color: #000;
-    background-color: gold;
-    border-radius: 50%;
-    box-shadow: 0 4px 20px 5px #333;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    font-weight: bold;
-}
-#spin:active {
-    width: 2.9em;
-    height: 2.9em;
-    font-size: 1.1rem;
+@media screen and (min-width: 600px) {
+    .wheel-box {
+        width: 500px;
+        height: 500px;
+    }
+    #spin {
+        width: 4em;
+        height: 4em;
+    }
 }
