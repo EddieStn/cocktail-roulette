@@ -15,27 +15,14 @@
         <h1>Cocktail Roulette</h1>
     </header>
     <div class="top-heading">
-        <h1>Spin the wheel to reveal a random cocktail once the animation ends</h1>
-        <h1>Or search for cocktails based on a specific spirit based</h1>
+        <h1 class="top">Spin the wheel to reveal a random cocktail once the animation ends</h1>
+        <h1 class="top">Or search for cocktails based on a specific spirit based</h1>
     </div>
-    <div class="outer-box">
-        <div id="inner-box" class="inner-box">
-            <div class="box1">
-                <span class="cocktail1"><img src="assets/images/cocktail.jpeg" alt="cocktail glass"></span>
-                <span class="cocktail2"><img src="assets/images/cocktail.jpeg" alt="cocktail glass"></span>
-                <span class="cocktail3"><img src="assets/images/cocktail.jpeg" alt="cocktail glass"></span>
-                <span class="cocktail4"><img src="assets/images/cocktail.jpeg" alt="cocktail glass"></span>
-            </div>
-
-            <div class="box2">
-                <span class="cocktail1 cocktail5"><img src="assets/images/cocktail.jpeg" alt="cocktail glass"></span>
-                <span class="cocktail2 cocktail6"><img src="assets/images/cocktail.jpeg" alt="cocktail glass"></span>
-                <span class="cocktail3 cocktail7"><img src="assets/images/cocktail.jpeg" alt="cocktail glass"></span>
-                <span class="cocktail4 cocktail8"><img src="assets/images/cocktail.jpeg" alt="cocktail glass"></span>
-            </div>
-        </div>
+    <div class="wheel-box">
+        <div id="wheel" class="wheel"></div>
         <button id="spin" onclick="spinTheWheel();">SPIN</button>
     </div>
+
     <div id="display"></div>
     <div id="user-search">
         <form>

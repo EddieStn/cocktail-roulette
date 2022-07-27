@@ -78,5 +78,5 @@ function spinTheWheel() {
 
     let deg = Math.floor(Math.random() * (x - y)) + y;
 
-    document.getElementById("inner-box").style.transform = "rotate("+deg+"deg)";
+    document.getElementById("wheel").style.transform = "rotate("+deg+"deg)";
 }
