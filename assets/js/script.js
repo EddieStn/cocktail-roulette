@@ -5,6 +5,7 @@ const searchResults = document.querySelector('#search-results');
 const spin = document.querySelector('#spin');
 const display = document.querySelector('#display');
 let results;
+let timer;
 
 subBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -16,16 +17,11 @@ subBtn.addEventListener('click', (e) => {
 spin.addEventListener('click', (e) => {
     e.preventDefault();
     spinTheWheel();
-    resetTimer();
+    clearTimeout(timer);
+    timer = setTimeout(() => {displayRandomCocktail();}, 5000);
     display.innerHTML = ``;
 });
 
-const timer = setTimeout(() => {displayRandomCocktail();}, 5000);
-
-function resetTimer() {
-    clearTimeout(timer);
-    timer = setTimeout(() => {displayRandomCocktail();}, 5000);
-}
 
 /**
  * Displays a random cocktail from the cocktails array when the spin button is pressed
@@ -47,7 +43,7 @@ function displayRandomCocktail() {
  */
 function getSearchedCocktails(term) {
     results = cocktails.filter(cocktail => {
-        if (term.length > 0) {
+        if (term === "rum" || term === "vodka" || term === "whiskey" || term === "gin") {
             return cocktail.ingredients.includes(term.toLowerCase());
         }
     });
@@ -68,7 +64,11 @@ function displayCocktails() {
         `;
     });
     // if noresults and html is empty : else - populate search results
-    html == '' ? searchResults.innerHTML = `<h2>You need to enter a valid input.</h2><h2>Please try rum / gin / vodka / whiskey</h2>` : searchResults.innerHTML = html;
+    if (html == '') {
+        searchResults.innerHTML = `<h2>Nothing found based on your input</h2><h2>Please try rum / gin / vodka / whiskey</h2>`;
+    } else {
+        searchResults.innerHTML = html;
+    }
     
     // reset input 
     input.value = '';
