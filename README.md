@@ -10,16 +10,42 @@
 # Testing
 
 ## Validator testing
+
 ### HTMl W3C Validator
+* No errors or warnings when passing through w3c validator. 
+   * [html validator result](https://validator.w3.org/nu/?doc=https%3A%2F%2Feddiestn.github.io%2Fcocktail-roulette%2F).
 ### CSS JIGSAW
-### Javascript
+* No errors or warnings when passing through w3c css validator.
+   * [css validator result](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feddiestn.github.io%2Fcocktail-roulette%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+### JSHINT
+* No errors or warnings when passing through jsHint.
+   * cocktails.js is a separate file with 1 array of objects, no errors found.
+
+![jshint result](assets/images/jshint.png)
+
 ### Lighthouse
 - Mobile
 - Desktop
 
 # Bugs
-spin button when clicked multiple times will not wait 5 seconds(setTimeout... 5000) before showing a cocktail
-fixed with clearTimeout
+* spin button when clicked multiple times will not wait 5 seconds(setTimeout... 5000) before showing a cocktail
+   * fixed by adding setTimeout and clearTimeout in a function
+
+* page load / page refresh would trigger setTimeout
+   * fixed by setting a variable timer and in the function clearTimeout(timer) before timer = setTimeout(...5000)
+
+      ```
+      let timer;
+      spin.addEventListener('click', (e) => {
+         e.preventDefault();
+         spinTheWheel();
+         clearTimeout(timer);
+         timer = setTimeout(() => {displayRandomCocktail();}, 5000);
+         display.innerHTML = ``;
+      });
+      ```
+
+
 
 # Local Development
 

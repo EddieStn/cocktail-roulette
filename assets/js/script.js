@@ -7,6 +7,9 @@ const display = document.querySelector('#display');
 let results;
 let timer;
 
+/**
+ * Search button event
+ */
 subBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const term = input.value.trim();
@@ -14,6 +17,9 @@ subBtn.addEventListener('click', (e) => {
     displayCocktails();
 });
 
+/**
+ * Spin the wheel event
+ */
 spin.addEventListener('click', (e) => {
     e.preventDefault();
     spinTheWheel();
