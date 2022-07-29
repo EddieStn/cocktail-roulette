@@ -14,9 +14,11 @@
     <header>
         <h1>Cocktail Roulette</h1>
     </header>
-    <div class="top-heading">
-        <h1 class="top">Spin the wheel to reveal a random cocktail once the animation ends</h1>
-        <h1 class="top">Or search for cocktails based on a specific spirit</h1>
+    <div class="hero">
+        <div class="hero-headers">
+            <h1 class="top">Spin the wheel to reveal a random cocktail once the animation ends</h1>
+            <h1 class="top">Or search for cocktails based on a specific spirit in the search bar below</h1>
+        </div>
     </div>
     <div class="wheel-box">
         <div id="wheel" class="wheel"></div>
@@ -25,8 +27,10 @@
 
     <div id="display"></div>
     <div id="user-search">
+        <h3>Search for your desired spirit</h3>
+        <p>This will bring up a list of cocktails</p>
         <form>
-            <label for="input">Search for spirit</label>
+            <!-- <label for="input">Search for your desired spirit</label> -->
             <input required id="input" type="text" placeholder="Whiskey/gin...">
             <button id="submit-btn" type="submit">Search</button>
         </form>

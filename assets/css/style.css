@@ -6,22 +6,27 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 li {
     list-style: circle;
     list-style-position: inside;
-    
+    padding-left: 5px;
 }
 
 h2 {
-    padding-top: 1em;
+    padding: 1em;
 }
+
 body {
     font-family: 'Jost', sans-serif;
     display: grid;
-    gap: 2em;
+    /* gap: 2em; */
     grid-template:
-        "header header header" 4em
-        ". top-heading ." auto
+        "header header header" 6em
+        "hero hero hero" 60vh
         ". wheel-box ." auto
         ". display ." auto
         ". user-search ." auto
@@ -30,7 +35,11 @@ body {
     
     background-color: rgb(54, 10, 10);
     color: gold;
+    letter-spacing: 3px;
 }
+/* ***************************** */
+/* Header styles start here  */
+/* ***************************** */
 
 header {
     grid-area: header;
@@ -42,23 +51,43 @@ header {
 
 header h1 {
     line-height: 2em;
+    font-size: clamp(2rem, 10vw, 3rem);
 }
 
-.top-heading {
-    grid-area: top-heading;
+/* ***************************** */
+/* Hero styles start here  */
+/* ***************************** */
+
+.hero {
+    grid-area: hero;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: fit-content; */
-    width: auto;
-    letter-spacing: 2px;
+    background: url(/assets/images/cocktails.jpg) no-repeat center center / cover;
+    box-shadow: 0 10px 20px #fff;
+    
+}
+
+.hero-headers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
 }
 
 .top {
-    font-size: 2rem;
-    padding: 5px;
+    text-shadow: 0 5px 5px #290303;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    padding: .5em .1em;
+    background-color: rgba(209, 20, 20, 0.732);
+    border-radius: 20px;
 }
+
+/* ***************************** */
+/* Wheel styles start here  */
+/* ***************************** */
 
 .wheel-box {
     grid-area: wheel-box;
@@ -68,11 +97,11 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 5em auto;
     border-radius: 50%;
     border: 5px groove rgb(227, 225, 225);
+    box-shadow: 0 0 40px 20px rgb(132, 12, 12);
 }
-
 
 .wheel {
     width: 100%;
@@ -83,11 +112,11 @@ header h1 {
     align-items: center;
     background: conic-gradient(
         hsl(360, 100%, 50%),
-        hsl(315, 100%, 50%),
-        hsl(270, 100%, 50%),
-        hsl(225, 100%, 50%),
-        hsl(180, 100%, 50%),
-        hsl(135, 100%, 50%),
+        hsl(315, 96%, 45%),
+        hsl(270, 89%, 33%),
+        hsl(225, 91%, 42%),
+        hsl(180, 83%, 49%),
+        hsl(135, 85%, 28%),
         hsl(90, 100%, 50%),
         hsl(45, 100%, 50%),
         hsl(0, 100%, 50%)
@@ -119,44 +148,82 @@ header h1 {
     font-size: 1.1rem;
 }
 
+/* ***************************** */
+/* Wheel Display styles start here  */
+/* ***************************** */
+
 #display {
     grid-area: display;
     font-size: 1.2rem;
 }
 
-.container {
-    grid-area: search-results;
+#display * {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
 }
+
+/* ***************************** */
+/* User input styles start here  */
+/* ***************************** */
 
 #user-search {
     grid-area: user-search;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
     margin-top: 1em;
-    font-size: 1.2rem;
-}
-
-#input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 4em;
 }
 
 #submit-btn {
     background-color: gold;
-    width: 6em;
-    height: 2em;
     border-radius: 10px;
     margin-top: 5px;    
     cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    font-family: inherit;
+    letter-spacing: 2px;
 }
 
 #submit-btn:hover {
-    background-color: #000;
-    color: gold;
+    background-color: rgb(147, 25, 25);
+    color: inherit;
 }
+
+/* ***************************** */
+/* Input results styles start here  */
+/* ***************************** */
+
+.container {
+    grid-area: search-results;
+    margin-bottom: 4em;
+}
+
+.container * {
+    padding: 10px;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+
+.container hr {
+    border: 3px ridge rgba(199, 13, 13, 0.577);
+    padding: 0;
+    margin: 1em 0;
+}
+
+/* ***************************** */
+/* Footer styles start here  */
+/* ***************************** */
 
 footer {
     grid-area: footer;
@@ -165,6 +232,39 @@ footer {
     background-color: #000;
     line-height: 2em;
 }
+
+/* ***************************** */
+/* Keyframes for opacity animation styles start here  */
+/* ***************************** */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+@-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+@-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ***************************** */
+/* Media queries styles start here  */
+/* ***************************** */
 
 @media screen and (min-width: 600px) {
     .wheel-box {

@@ -78,7 +78,9 @@
 The live link can be found here - 
 
 # Credits 
-## Daniel_C_5p_lead for helping me with an  issue on a slack thread
+## Media
+* [hero image - pexels](https://www.pexels.com/photo/clear-drinking-glasses-2531188/)
+
 
 
 # Acknowledgements

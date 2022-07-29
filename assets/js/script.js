@@ -12,7 +12,7 @@ let timer;
  */
 subBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    const term = input.value.trim();
+    const term = input.value.toLowerCase().trim();
     getSearchedCocktails(term);
     displayCocktails();
 });
@@ -50,7 +50,7 @@ function displayRandomCocktail() {
 function getSearchedCocktails(term) {
     results = cocktails.filter(cocktail => {
         if (term === "rum" || term === "vodka" || term === "whiskey" || term === "gin") {
-            return cocktail.ingredients.includes(term.toLowerCase());
+            return cocktail.ingredients.includes(term);
         }
     });
 }
@@ -63,8 +63,8 @@ function displayCocktails() {
     // populate html template literal
     results.map(result => { 
         html += `
-        <h2>${result.name}</h2>
-        <h3>Ingredients: ${result.ingredients}</h3>
+        <h2>${result.name}</h2><br>
+        <h3>Ingredients: ${result.ingredients}</h3><br>
         <h3>Method: ${result.method}</h3>
         <hr>
         `;
