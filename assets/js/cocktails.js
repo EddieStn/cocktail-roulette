@@ -115,7 +115,7 @@ const cocktails = [
     <li>4 cocktail cherries (to garnish)</li>
     <li>2 orange slices (to garnish)</li>
     </ul>`,
-    method: `
+    method: `<br>
     STEP 1 <br>
     Fill a cocktail shaker with ice then add the rums. Scoop the flesh and seeds from the passion fruit and add to the shaker along with the orange and lemon juices, sugar syrup and grenadine.
 
@@ -226,7 +226,6 @@ const cocktails = [
     <li>slice of orange and a cherry on a stick to garnish</li>
     </ul>`,
     method: `<br>
-    STEP 1
     Shake all of the ingredients (except for the lemon zest) hard with ice and strain into an ice-filled rocks glass. 
     Squeeze the lemon zest, shiny side down over the drink so the scented oils spray across the surface. Discard the zest, add the garnish and serve.
     <br> Prep 5min / cook 5min / serves 1`
@@ -243,7 +242,6 @@ const cocktails = [
     <li>a twist of pared lemon</li>
     </ul>`,
     method: `<br>
-    STEP 1
     Stir the ingredients with ice in a mixing glass, then strain into a cocktail glass. Garnish and serve.
     <br> Prep 5min / Serves 1`
 }, {
@@ -256,7 +254,6 @@ const cocktails = [
     <li>pared lemon zest, to garnish</li>
     </ul>`,
     method: `<br>
-    STEP 1 <br>
     Put everything except the lemon zest in a tumbler and give it a quick stir to combine and dilute. Garnish with the lemon zest to serve.
     <br> Prep 5min / Serves 1`
 }];
