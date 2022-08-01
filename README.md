@@ -1,6 +1,37 @@
 # Cocktail Roulette
+## Cocktail roulette is a webpage built for every cocktail lover. When in doubt of your next drink or just looking to learn a new cocktail recipe, head on to cocktail roulette and have fun with the interactive spinning wheel that brings random cocktails in the spotlight, or search for spirit based ones.
+Open the live webpage through this [link](https://eddiestn.github.io/cocktail-roulette/).
+
+<img src="assets/images/responsive.png" alt="website responsiveness sceenshots">
 
 # Features
+## Header with the page logo
+
+<img src="assets/images/logo.png" alt="page logo">
+
+## Hero
+- The hero is also the web`s guide, explaining how the wheel works and what to use the search bar for.
+
+<img src="assets/images/hero.png" alt="multiple cocktails hero image">
+
+## The wheel
+- Once the **spin** button is clicked, the wheel spins for 5 seconds and then it displays a random cocktail.
+- If the button is clicked again, the timer resets and waits for the animation to end before displaying the cocktail.
+- When you spin the wheel again, the previous cocktail disappears. 
+
+<img src="assets/images/wheel.png" alt="spinning wheel section">
+
+## Input section
+- Here the user can search for all cocktails, based on a specific spirit input, eg. "rum" will display all cocktails containing rum.
+- For an invalid input, the user will see a warning notice with the right input values.
+- A new input generates a new list of cocktails and the previous one disappears
+
+<img src="assets/images/user-search.png" alt="user search section">
+
+## Search result
+Here is how the displayed cocktails section looks like. It is hidden by default and it is only displayed once triggered by the wheel or user input.
+
+<img src="assets/images/search-result.png" alt="cocktails display section">
 
 # Technology Used 
 - HTML
@@ -75,7 +106,7 @@
 - From the source section drop-down menu, select the Master Branch and click Save
 - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found here - 
+The live link can be found here - (https://eddiestn.github.io/cocktail-roulette/)
 
 # Credits 
 ## Media
