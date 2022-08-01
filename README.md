@@ -38,6 +38,13 @@ Here is how the displayed cocktails section looks like. It is hidden by default 
 - CSS
 - Javascript
 
+## Frameworks and Libraries 
+
+   - [Google fonts](https://fonts.google.com/)
+   - [Am I Responsive](https://ui.dev/amiresponsive)
+   - [GitPod](https://gitpod.io/)
+   - [GitHub](https://github.com/)
+
 # Testing
 
 ## Validator testing
@@ -55,12 +62,17 @@ Here is how the displayed cocktails section looks like. It is hidden by default 
 ![jshint result](assets/images/jshint.png)
 
 ### Lighthouse
-- Mobile
+- Mobile 
+
+<img src="assets/images/lighthouse-mobile.png" alt="lighthouse test for mobile">
+
 - Desktop
+
+<img src="assets/images/lighthouse-desktop.png" alt="lighthouse test for desktop">
 
 # Bugs
 * spin button when clicked multiple times will not wait 5 seconds(setTimeout... 5000) before showing a cocktail
-   * fixed by adding setTimeout and clearTimeout in a function
+   * fixed by adding setTimeout and clearTimeout in a function;
 
 * page load / page refresh would trigger setTimeout
    * fixed by setting a variable timer and in the function clearTimeout(timer) before timer = setTimeout(...5000)
@@ -75,8 +87,8 @@ Here is how the displayed cocktails section looks like. It is hidden by default 
          display.innerHTML = ``;
       });
       ```
-
-
+* hero image will not display on github pages
+   * the issue was absolute path on the url image, fixed with relative path;
 
 # Local Development
 
@@ -112,12 +124,15 @@ The live link can be found here - (https://eddiestn.github.io/cocktail-roulette/
 ## Media
 * [hero image - pexels](https://www.pexels.com/photo/clear-drinking-glasses-2531188/)
 
-
-
 # Acknowledgements
-## Many thanks to my mentor, Chris Quinn, for his guidance
-## Daniel_C_5p_lead for helping me with an  issue on a slack thread
 
+## Many thanks to my mentor, Chris Quinn, for his guidance
+## Thank you Daniel_C_5p_lead and Daisy_mentor for helping me on my slack threads
 
 # Sources
+
 ## Sites and courses that provided me with extra information and best practices to help build this project
+
+* [code with mosh](https://codewithmosh.com/)
+* [w3schools](https://www.w3schools.com/)
+* [Slack](https://slack.com/intl/en-gb/)
