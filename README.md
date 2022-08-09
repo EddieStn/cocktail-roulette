@@ -33,6 +33,11 @@ Here is how the displayed cocktails section looks like. It is hidden by default 
 
 <img src="assets/images/search-result.png" alt="cocktails display section">
 
+## Footer
+The footer doesn`t consists of anything but a simple "Cheers" text
+
+<img src="assets/images/footer.png" alt="footer">
+
 # Technology Used 
 - HTML
 - CSS
@@ -100,7 +105,7 @@ Here is how the displayed cocktails section looks like. It is hidden by default 
 2. In the top-right corner of the page, click Fork.
 
 ## Cloning your forked repository
-### Right now, you have a fork of the Art-of-fitness repository, but you do not have the files in that repository locally on your computer.
+### Right now, you have a fork of the Cocktail-roulette repository, but you do not have the files in that repository locally on your computer.
 1. On GitHub.com, navigate to your fork of the Cocktail-roulette repository.
 2. Above the list of files, click Code.
 3. Copy the URL for the repository.
