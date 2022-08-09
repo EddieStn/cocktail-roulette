@@ -5,6 +5,10 @@ Open the live webpage through this [link](https://eddiestn.github.io/cocktail-ro
 <img src="assets/images/responsive.png" alt="website responsiveness sceenshots">
 
 # Features
+
+### This website highlights the beautiful contrast between gold(for the google font -"Jost") and dark red as the main background color. 
+### It is a fully responsive user friendly Javascript application with interractive and informative content
+
 ## Header with the page logo
 
 <img src="assets/images/logo.png" alt="page logo">
@@ -23,13 +27,13 @@ Open the live webpage through this [link](https://eddiestn.github.io/cocktail-ro
 
 ## Input section
 - Here the user can search for all cocktails, based on a specific spirit input, eg. "rum" will display all cocktails containing rum.
-- For an invalid input, the user will see a warning notice with the right input values.
+- For an invalid input, the user will see a warning notice which also includes the right input values.
 - A new input generates a new list of cocktails and the previous one disappears
 
 <img src="assets/images/user-search.png" alt="user search section">
 
 ## Search result
-Here is how the displayed cocktails section looks like. It is hidden by default and it is only displayed once triggered by the wheel or user input.
+Here is how the displayed cocktails section looks like. It is only displayed once triggered by the wheel or user input, with a 2 seconds opacity delay.
 
 <img src="assets/images/search-result.png" alt="cocktails display section">
 
@@ -38,6 +42,11 @@ The footer doesn`t consists of anything but a simple "Cheers" text
 
 <img src="assets/images/footer.png" alt="footer">
 
+# Other implementation idea
+
+## Add a feature to save cocktails as favourites
+<br> 
+
 # Technology Used 
 - HTML
 - CSS
@@ -45,16 +54,18 @@ The footer doesn`t consists of anything but a simple "Cheers" text
 
 ## Frameworks and Libraries 
 
+
    - [Google fonts](https://fonts.google.com/)
    - [Am I Responsive](https://ui.dev/amiresponsive)
    - [GitPod](https://gitpod.io/)
    - [GitHub](https://github.com/)
+   - [Video to gif](https://ezgif.com/)
 
 # Testing
 
 ## Validator testing
 
-### HTMl W3C Validator
+### HTML W3C Validator
 * No errors or warnings when passing through w3c validator. 
    * [html validator result](https://validator.w3.org/nu/?doc=https%3A%2F%2Feddiestn.github.io%2Fcocktail-roulette%2F).
 ### CSS JIGSAW
@@ -75,7 +86,41 @@ The footer doesn`t consists of anything but a simple "Cheers" text
 
 <img src="assets/images/lighthouse-desktop.png" alt="lighthouse test for desktop">
 
+## Responsiveness
+
+* Phone
+
+<img src="assets/images/phone.png" alt="mobile responsive test" width="800">
+
+* Tablet
+
+<img src="assets/images/tablet.png" alt="tablet responsive test" width="800">
+
+* Notebook 10 inch
+
+<img src="assets/images/notebook10.png" alt="small notebook responsive test" width="800">
+
+* Notebook 20 inch
+
+<img src="assets/images/notebook20.png" alt="big notebook responsive test" width="800">
+
+* Dev-tools responsiveness
+
+<img src="assets/images/responsive-gif.gif" alt="devtools responsive test">
+
+## Button testing
+
+* Spin button
+
+<img src="assets/images/spin-gif.gif" alt="spin button test">
+
+* Search button
+
+<img src="assets/images/search-gif.gif" alt="search button test">
+
 # Bugs
+### Started off building the spinning wheel with a bunch of divs styled with clip-paths, but i figured that would`ve been a nighmare to make it responsive so I changed it to a conic-gradient instead.
+
 * spin button when clicked multiple times will not wait 5 seconds(setTimeout... 5000) before showing a cocktail
    * fixed by adding setTimeout and clearTimeout in a function;
 
