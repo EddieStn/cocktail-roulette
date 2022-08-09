@@ -26,7 +26,7 @@ body {
     /* gap: 2em; */
     grid-template:
         "header header header" 6em
-        "hero hero hero" 60vh
+        "hero hero hero" 70vh
         ". wheel-box ." auto
         ". display ." auto
         ". user-search ." auto
@@ -74,12 +74,12 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 1em;
+    padding: 0 2em;
 }
 
 .top {
     text-shadow: 0 5px 5px #290303;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1.3rem, 3vw, 2.5rem);
     padding: .5em .1em;
     background-color: rgba(209, 20, 20, 0.732);
     border-radius: 20px;
