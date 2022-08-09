@@ -65,8 +65,8 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url("/assets/images/cocktails.jpg") no-repeat center center / 100%;
-    box-shadow: 0 10px 20px #fff;  
+    background: url("../images/cocktails.jpg") no-repeat center center / cover;
+    box-shadow: 0 10px 20px #fff;
 }
 
 .hero-headers {
